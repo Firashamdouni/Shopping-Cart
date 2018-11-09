@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="container">
+    <div class="container-fluid dark-overlay fixed-top" id="a">
+      <div class="card"id="border">
+                    <div class="card-body bg-light">
+                     <p class="display-4 text-center " > welcome to your shop</p>
+                    </div>
+                  </div>
+
+<ul class="container mr-5 col-md-10 col-sm-10" id="myList" >
+
+    <li style="height:5%; border-radius: 5px;">
+            <div class="d-flex p-2 bd-highlight">Shopping Bag total :<span class="badge badge-info"><span id="total"></span></span>$</div>
+    </li>
+  <li class="item-group d-flex justify-content-around">
+      <div class="link-item d-flex justify-content-around col-md-3 col-sm-3"style="margin-left:-2%">
+          <a href="#" id="delete" onclick="myFunction(0)" > <i class="fas fa-times"></i></a>
+          <a href="#" onclick="likeFunction(0)" ondblclick="unlikeFunction(0)"><i class="fas fa-heart"  id="like0"></i></a>
+      </div>
+      <div class="item-info d-flex justify-content-between col-md-4 col-sm-3">
+          <img src="image/converse.jpg"  class="image">
+          <p class="font-weight-light  text-muted pt-3 ">converse</p>
+      </div>
+      <div class="col-md-1 mt-3 ml-2">
+        <button type="button" class="btn btn-light disabled">
+           Price:<span class="badge badge-light ml-2">20$</span>
+         
+          </button>
+      </div>
+      <div class="item-money d-flex flex-row ml-5 d-flex justify-content-around col-md-4 col-sm-3">
+        <div class="group-btn mr-5">
+                <button class="button" onclick="minusFunction(0,20)" onclick="sum()"><i class="fas fa-minus"></i></button>
+                <span class="badge badge-light "><p id="quantiter0">0</p></span>
+                <button class="button" onclick="plusFunction(0,20)" onclick="price(0)" onclick="sum()"><i class="fas fa-plus"></i></button>
+                <p>$<p class="sum" id="price0">0</p></p>
+        </div>
+        <div> </div>
+      </div>
+
+  </li>
+  <li class="item-group d-flex justify-content-around">
+      <div class="link-item d-flex justify-content-around col-md-3" style="margin-left:-4%">
+            <a href="#" id="delete" onclick="myFunction(1)"> <i class="fas fa-times"></i></a>
+            <a href="#"  onclick="likeFunction(1)" ondblclick="unlikeFunction(1)"><i class="fas fa-heart" id="like1"></i></a>
+        </div>
+        <div class="item-info d-flex justify-content-between col-md-4">
+            <img src="image/sneakers.jpg"  class="image">
+            <p class="font-weight-light  text-muted pt-3"style="margin-right: 5%;">sneakers</p>
+        </div>
+        <div class="col-md-1 mt-3 ml-2" >
+            <button type="button" class="btn btn-light disabled">
+               Price:<span class="badge badge-light ml-2">50$</span>
+              </button>
+          </div>
+        <div class="item-money d-flex justify-content-around col-md-4">
+          <div class="group-btn mr-5 ">
+                  <button class="button" onclick="minusFunction(1,50)" onclick="sum()"><i class="fas fa-minus"></i></button>
+                  <span class="badge badge-light "><p id="quantiter1">0</p></span>
+                  <button class="button" onclick="plusFunction(1,50)" onclick="price(1)" onclick="sum()"><i class="fas fa-plus"></i></button>
+                 <p>$<p class="sum" id="price1">0</p></p>
+          </div>
+        
+    </div>
+    </li>
+    <li class="item-group d-flex justify-content-around">
+        <div class="link-item d-flex justify-content-around  col-md-3" style="margin-left:-5%" id="aaksa">
+            <a href="#" id="delete" onclick="myFunction(2)" > <i class="fas fa-times"></i></a>
+            <a href="#" onclick="likeFunction(2)" ondblclick="unlikeFunction(2)"><i class="fas fa-heart"  id="like2"></i></a>
+        </div>
+        <div class="item-info d-flex justify-content-around  col-md-4">
+                <img src="image/adidas.jpg"  class="image" style="margin-left:-80px;">
+            <p class="font-weight-light  text-muted pt-3 pl-2"style="margin-left: 5%;">Nike</p>
+        </div>
+        <div class="col-md-1 mt-3 ml-2">
+            <button type="button" class="btn btn-light disabled" style="margin-left:-55px">
+               Price:<span class="badge badge-light ml-2">5$</span>
+              </button>
+          </div>
+        <div class="item-money d-flex justify-content-around col-md-3">
+          <div class="group-btn mr-5 pr-5">
+                  <button class="button" onclick="minusFunction(2,5)" onclick="sum()"><i class="fas fa-minus"></i></button>
+                  <span class="badge badge-light "><p id="quantiter2">0</p></span>
+                  <button class="button" onclick="plusFunction(2,5)" onclick="price(2)" onclick="sum()"><i class="fas fa-plus"></i></button>
+                  <p>$<p class="sum" id="price2">0</p></p>
+          </div>
+          <div> </div>
+        </div>
+  
+    </li>
+    <li class="item-group d-flex justify-content-around">
+        <div class="link-item d-flex justify-content-around col-md-3"style="margin-right:5px">
+            <a href="#" id="delete" onclick="myFunction(3)" style="margin-left:-40px; margin-top: 15px" > <i class="fas fa-times"></i></a>
+            <a href="#" onclick="likeFunction(3)" ondblclick="unlikeFunction(3)"  style="margin-left:-40px; margin-top: 15px"><i class="fas fa-heart"  id="like3"></i></a>
+        </div>
+        <div class="item-info d-flex justify-content-around col-md-4">
+            <img src="image/adidas1.jpg"  class="image" style="margin-left: -80px;">
+            <p class="font-weight-light  text-muted pt-3">Adidas</p>
+        </div>
+        <div class="col-md-1 mt-3 ml-2">
+            <button type="button" class="btn btn-light disabled" style="margin-left:-35px">
+               Price:<span class="badge badge-light ml-2">15$</span>
+              </button>
+          </div>
+        <div class="item-money d-flex justify-content-start col-md-4" id="item-media">
+          <div class="group-btn mr-5">
+                  <button class="button" onclick="minusFunction(3,15)" onclick="sum()"><i class="fas fa-minus"></i></button>
+                  <span class="badge badge-light "><p id="quantiter3">0</p></span>
+                 <button class="button" onclick="plusFunction(3,15)" onclick="price(3)" onclick="sum()"><i class="fas fa-plus"></i></button>
+                  <p>$<p class="sum" id="price3">0</p></p>
+         
+          <div> </div>
+        </div>
+  
+    </li>
+    <li class="item-group d-flex justify-content-around" id="hidden">
+        <div class="link-item d-flex justify-content-around col-md-3"style="margin-right:5px">
+            <a href="#" id="delete" onclick="myFunction(3)" style="margin-left:-40px; margin-top: 15px" > <i class="fas fa-times"></i></a>
+            <a href="#" onclick="likeFunction(4)" ondblclick="unlikeFunction(4)" style="margin-left:-40px; margin-top: 15px"><i class="fas fa-heart"  id="like4"></i></a>
+        </div>
+        <div class="item-info d-flex justify-content-around col-md-4">
+            <img src="image/adidas1.jpg"  class="image" style="margin-left: -80px;">
+            <p class="font-weight-light  text-muted pt-3">Adidas</p>
+        </div>
+        <div class="col-md-1 mt-3 ml-2">
+            <button type="button" class="btn btn-light disabled" style="margin-left:-35px">
+               Price:<span class="badge badge-light ml-2">15$</span>
+              </button>
+          </div>
+        <div class="item-money d-flex justify-content-start col-md-4" id="item-media">
+          <div class="group-btn mr-5">
+                  <button class="button" onclick="minusFunction(3,15)" onclick="sum()"><i class="fas fa-minus"></i></button>
+                  <span class="badge badge-light "><p id="quantiter3">0</p></span>
+                 <button class="button" onclick="plusFunction(3,15)" onclick="price(3)" onclick="sum()"><i class="fas fa-plus"></i></button>
+                  <p>$<p class="sum" id="price3">0</p></p>
+         
+          <div> </div>
+        </div>
+  
+    </li>
+
+
+</ul>
+<button type="button" class="btn btn-danger mt-1" id="btn-show">Show More +</button>
+</div>
+
+<script src="script.js"></script>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
